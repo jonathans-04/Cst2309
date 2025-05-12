@@ -1,0 +1,150 @@
+<!-- membership.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BluePrint Fitness Lab – Membership</title>
+  <link rel="stylesheet" href="membership.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">BluePrint Fitness Lab</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="membership-grid">
+    <!-- Left image -->
+    <div class="side-image">
+      <img src="weightlifting2.jpg" alt="Athlete training" />
+    </div>
+
+    <!-- Form Container -->
+    <section class="form-container">
+      <h2>Join BluePrint Fitness Lab</h2>
+      <form id="membershipForm">
+        <!-- Personal Info -->
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="plan">Plan</label>
+        <select id="plan" name="plan" required>
+          <option value="">Select a Plan</option>
+          <option value="basic">Basic</option>
+          <option value="premium">Premium</option>
+          <option value="elite">Elite</option>
+        </select>
+
+        <!-- Credit Card Info -->
+        <fieldset class="payment-info">
+          <legend>Payment Information</legend>
+
+          <label for="cardNumber">Card Number</label>
+          <input
+            type="text"
+            id="cardNumber"
+            name="cardNumber"
+            placeholder="1234 5678 9012 3456"
+            required
+          />
+          <div id="cardType" class="card-type"></div>
+
+          <label for="cardTypeSelect">Card Type</label>
+          <select id="cardTypeSelect" name="cardTypeSelect" required>
+            <option value="">Select Card Type</option>
+            <option value="Visa">Visa</option>
+            <option value="MasterCard">MasterCard</option>
+            <option value="Amex">Amex</option>
+            <option value="Discover">Discover</option>
+          </select>
+
+          <label for="expiry">Expiry Date</label>
+          <input type="month" id="expiry" name="expiry" required />
+
+          <label for="cvv">CVV</label>
+          <input
+            type="text"
+            id="cvv"
+            name="cvv"
+            placeholder="123"
+            pattern="\d{3}"
+            required
+          />
+        </fieldset>
+
+        <!-- Billing Address -->
+        <fieldset class="billing-info">
+          <legend>Billing Address</legend>
+
+          <label for="address">Address</label>
+          <input type="text" id="address" name="address" required />
+
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" required />
+
+          <label for="state">State</label>
+          <input type="text" id="state" name="state" maxlength="2" required />
+
+          <label for="zip">Zip Code</label>
+          <input
+            type="text"
+            id="zip"
+            name="zip"
+            placeholder="12345"
+            pattern="\d{5}"
+            required
+          />
+        </fieldset>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+
+    <!-- Right image -->
+    <div class="side-image">
+      <img src="weightlifting.jpg" alt="Personal training" />
+    </div>
+  </main>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>What Our Members Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <img src="workoutfloor.jpg" alt="Taylor R." />
+        <p>“Joining BluePrint Fitness Lab changed my life. The trainers are amazing!”</p>
+        <span class="reviewer">– Taylor R.</span>
+      </div>
+      <div class="testimonial-card">
+        <img src="training.jpeg" alt="Morgan S." />
+        <p>“Fantastic community and the 24/7 access is unbeatable.”</p>
+        <span class="reviewer">– Morgan S.</span>
+      </div>
+      <div class="testimonial-card">
+        <img src="group.jpg" alt="Jordan K." />
+        <p>“Best equipment, best coaches—highly recommend!”</p>
+        <span class="reviewer">– Jordan K.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-info">
+      <p>
+        123 Fitness Ave, Wellness City, WC 12345 | Phone:
+        <a href="tel:+1234567890">+1 (234) 567-890</a>
+      </p>
+    </div>
+    <p>&copy; 2025 BluePrint Fitness Lab</p>
+  </footer>
+
+  <script src="js/membership.js" defer></script>
+</body>
+</html>
